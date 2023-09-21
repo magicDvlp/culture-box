@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US" class="html-hidden">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <style>
+      html.html-hidden {
+        width: 100%;
+        overflow: hidden
+      }
+
+      .preload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        left: 0;
+        top: 0
+      }
+
+      body {
+        overflow: hidden;
+        visibility: hidden
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1
+        }
+
+        to {
+          opacity: 0;
+          visibility: hidden
+        }
+      }
+
+      .preload_hide {
+        animation: fadeOut .8s cubic-bezier(0, 0, .2, 1) forwards
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translateY(0)
+        }
+
+        50% {
+          transform: translateY(-20px)
+        }
+
+        100% {
+          transform: translateY(0)
+        }
+      }
+
+      .preload-img {
+        width: 200px;
+        max-width: 90%;
+        height: auto;
+        animation: spin 2s infinite linear
+      }
+
+      @media(max-width:1199px) {
+        .preload-img {
+          width: 150px
+        }
+      }
+
+      @media(max-width:575px) {
+        .preload-img {
+          width: 120px
+        }
+      }
+    </style>
+    <script>
+      let externalVar = {
+        nonce: 'sadfsdf',
+        ajaxUrl: '',
+        baseUrl: '',
+      };
+    </script>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="preload">
+      <img src="img/preload.svg" alt="culture box" class="preload-img">
+    </div>
+    <div class="layout">
+      <header class="header d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center header__row">
+            <div class="col-2 d-xl-none">
+              <button class="d-flex hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <div class="d-flex justify-content-center d-xl-block col-xl-3 col-8">
+              <a href="/" class="logo header__logo">
+                <img src="img/logo.svg" class="logo__img" alt="culture box logo block ">
+              </a>
+            </div>
+            <div class="col-xl-6 d-none d-xl-block">
+              <nav class="nav-menu d-flex justify-content-center alignt-items-center">
+                <a href="about.html" class="nav-menu__item">About</a>
+                <a href="explore.html" class="nav-menu__item">Explore</a>
+                <a href="question.html" class="nav-menu__item">Question</a>
+                <a href="start.html" class="nav-menu__item">Start</a>
+                <a href="contact.html" class="nav-menu__item">Contact</a>
+              </nav>
+            </div>
+            <div class="col-xl-3 col-2 header-search-col">
+              <form action="search-result.html" class="search-widget">
+                <div class="search-widget__inner">
+                  <div class="search-widget-field">
+                    <div class="search-widget-field__input-wrapper">
+                      <button class="search-widget-field__btn search-widget-field__btn_go">&#10094;</button>
+                      <input placeholder="Search..." type="text" name="search" required autocomplete="off" class="input search-widget-field__input input_dark-mode" required>
+                    </div>
+                    <span class="search-widget-field__btn search-widget-field__btn_search">
+                  <svg class="icon icon-search search-widget-field__icon search-widget-field__icon_search">
+                    <use xlink:href="#search"/>
+                  </svg>      </span>
+                    <span class="search-widget-field__btn search-widget-field__btn_clean">
+                  <svg class="icon icon-close search-widget-field__icon search-widget-field__icon_clean">
+                    <use xlink:href="#close"/>
+                  </svg>      </span>
+                    <span class="search-widget-field-loading">
+                  <img src="img/btn-load.svg" alt="load" class="search-widget-field-loading__img">
+                </span>
+                  </div>
+                  <div class="search-list bg-white search-widget__result">
+                    <div class="search-list__inner">
+                    </div>
+                    <a href="search.html" class="search-list__all">View all results</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-layout">
+          <div class="mobile-menu">
+            <a href="about.html" class="mobile-menu-item">About</a>
+            <a href="explore.html" class="mobile-menu-item">Explore</a>
+            <a href="question.html" class="mobile-menu-item">Question</a>
+            <a href="start.html" class="mobile-menu-item">Start</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <a href="privacy.html" class="mobile-menu-item">Privacy</a>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <section class="section section_filled section_marigold section_sm-indent">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-8">
+                <h3 class="section-heading text-center">
+                  Search results
+                </h3>
+                <form action="search-result.html" class="search-form">
+                  <div class="search-form__field">
+                    <input placeholder="Search..." type="text" name="s" value="dui edit" class="input search-form__input input_lg" required> <button class="search-form__btn"><svg class="icon icon-search search-form__icon">
+                        <use xlink:href="#search" />
+                      </svg></button>
+                  </div>
+                  <p class="search-form__info">Showing <strong>1</strong> to <strong>23</strong> results for ‘dui edit’ </p>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section_filled section_transparent section_sm-indent">
+          <div class="container">
+            <div class="post-simple-list">
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+              <article class="post-simple">
+                <a href="explore-inner.html" class="post-simple__heading">Most recent blog post</a>
+                <p class="post-simple__excerpt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, <span class="search-accent-text">sed do eiusmod te</span>mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+              </article>
+            </div>
+            <div class="pagination">
+              <a href="#" class="page-numbers page-numbers_prev disabled">Prev</a>
+              <a href="#" class="page-numbers current">1</a>
+              <a href="#" class="page-numbers">2</a>
+              <a href="#" class="page-numbers">3</a>
+              <a href="#" class="page-numbers">...</a>
+              <a href="#" class="page-numbers">10</a>
+              <a href="#" class="page-numbers page-numbers_next">Next</a>
+            </div>
+          </div>
+
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="nav-menu d-flex justify-content-center alignt-items-center d-none d-xl-flex">
+            <a href="about.html" class="nav-menu__item">About</a>
+            <a href="explore.html" class="nav-menu__item">Explore</a>
+            <a href="question.html" class="nav-menu__item">Question</a>
+            <a href="start.html" class="nav-menu__item">Start</a>
+            <a href="contact.html" class="nav-menu__item">Contact</a>
+            <a href="privacy.html" class="nav-menu__item">Privacy</a>
+          </nav>
+          <div class="social-networks footer__social-networks">
+            <a href="https://twitter.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg> </a>
+            <a href="https://www.linkedin.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="#linkedin" />
+              </svg> </a>
+            <a href="https://www.youtube.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg> </a>
+          </div>
+          <p class="text-center text-white copyright">© Copyright 2023 CultureBlox</p>
+        </div>
+      </footer>
+    </div> <!-- submit modal message start -->
+    <div id="submit-modal-success" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Great!</p>
+            <p>We will add your email to the mailing list</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="submit-modal-error" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Error!</p>
+            <p>Try again later!</p>
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- submit modal message end -->
+
+    <script defer="defer" src="js/libs.js"></script>
+    <script defer="defer" src="js/common.js"></script>
+  </body>
+
+</html>

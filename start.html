@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-US" class="html-hidden">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <style>
+      html.html-hidden {
+        width: 100%;
+        overflow: hidden
+      }
+
+      .preload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        left: 0;
+        top: 0
+      }
+
+      body {
+        overflow: hidden;
+        visibility: hidden
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1
+        }
+
+        to {
+          opacity: 0;
+          visibility: hidden
+        }
+      }
+
+      .preload_hide {
+        animation: fadeOut .8s cubic-bezier(0, 0, .2, 1) forwards
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translateY(0)
+        }
+
+        50% {
+          transform: translateY(-20px)
+        }
+
+        100% {
+          transform: translateY(0)
+        }
+      }
+
+      .preload-img {
+        width: 200px;
+        max-width: 90%;
+        height: auto;
+        animation: spin 2s infinite linear
+      }
+
+      @media(max-width:1199px) {
+        .preload-img {
+          width: 150px
+        }
+      }
+
+      @media(max-width:575px) {
+        .preload-img {
+          width: 120px
+        }
+      }
+    </style>
+    <script>
+      let externalVar = {
+        nonce: 'sadfsdf',
+        ajaxUrl: '',
+        baseUrl: '',
+      };
+    </script>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="preload">
+      <img src="img/preload.svg" alt="culture box" class="preload-img">
+    </div>
+    <div class="layout">
+      <header class="header d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center header__row">
+            <div class="col-2 d-xl-none">
+              <button class="d-flex hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <div class="d-flex justify-content-center d-xl-block col-xl-3 col-8">
+              <a href="/" class="logo header__logo">
+                <img src="img/logo.svg" class="logo__img" alt="culture box logo block ">
+              </a>
+            </div>
+            <div class="col-xl-6 d-none d-xl-block">
+              <nav class="nav-menu d-flex justify-content-center alignt-items-center">
+                <a href="about.html" class="nav-menu__item">About</a>
+                <a href="explore.html" class="nav-menu__item">Explore</a>
+                <a href="question.html" class="nav-menu__item">Question</a>
+                <a href="start.html" class="nav-menu__item nav-menu__item_active">Start</a>
+                <a href="contact.html" class="nav-menu__item">Contact</a>
+              </nav>
+            </div>
+            <div class="col-xl-3 col-2 header-search-col">
+              <form action="search-result.html" class="search-widget">
+                <div class="search-widget__inner">
+                  <div class="search-widget-field">
+                    <div class="search-widget-field__input-wrapper">
+                      <button class="search-widget-field__btn search-widget-field__btn_go">&#10094;</button>
+                      <input placeholder="Search..." type="text" name="search" required autocomplete="off" class="input search-widget-field__input input_dark-mode" required>
+                    </div>
+                    <span class="search-widget-field__btn search-widget-field__btn_search">
+                  <svg class="icon icon-search search-widget-field__icon search-widget-field__icon_search">
+                    <use xlink:href="#search"/>
+                  </svg>      </span>
+                    <span class="search-widget-field__btn search-widget-field__btn_clean">
+                  <svg class="icon icon-close search-widget-field__icon search-widget-field__icon_clean">
+                    <use xlink:href="#close"/>
+                  </svg>      </span>
+                    <span class="search-widget-field-loading">
+                  <img src="img/btn-load.svg" alt="load" class="search-widget-field-loading__img">
+                </span>
+                  </div>
+                  <div class="search-list bg-white search-widget__result">
+                    <div class="search-list__inner">
+                    </div>
+                    <a href="search.html" class="search-list__all">View all results</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-layout">
+          <div class="mobile-menu">
+            <a href="about.html" class="mobile-menu-item">About</a>
+            <a href="explore.html" class="mobile-menu-item">Explore</a>
+            <a href="question.html" class="mobile-menu-item">Question</a>
+            <a href="start.html" class="mobile-menu-item mobile-menu-item_active">Start</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <a href="privacy.html" class="mobile-menu-item">Privacy</a>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <section class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <h3 class="section-heading text-center section-heading_lg section-heading_sm-indent">
+                  Awesome workplace cultures do not <br>
+                  happen by chance. <br>
+                  <span class="accent-text-fuchsia">Start the six-month journey now.</span>
+
+                </h3>
+                <div class="text-field">
+                  <p class="text-center">Get the help you need and build the workplace culture that will set you apart from the competition.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section-half section-half_animate section_half-bg section_r-mode section_marigold">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-8 col-md-10 col-sm-11">
+                <h3 class="section-heading section-half__mobile-heading">
+                  30 Minute <span class="accent-text-marigold">Discovery</span> <br> Session
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_marigold image-card_img-y-bottom">
+            <div class="container">
+              <div class="image-card__img-wrapper">
+                <img src="img/phone.svg" alt="image" width="499" height="509" class="image-card__img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading d-none d-xl-block">
+                  30 Minute <span class="accent-text-marigold">Discovery</span> <br> Session
+                </h3>
+                <div class="text-field">
+                  <p>Perhaps you like the idea of building an awesome workplace culture in six months but are unsure if it is possible. Can it really work if people are rigid and fight change at every step? Every organization has what seem like unique problems and leaders want to know how CultureBlox will work for them. </p>
+                  <p>This is your chance to ask a CultureBlox expert any questions and overcome any concerns you may have. We often start by asking you to tell us about your problems, your values, and the results you are looking for. That way we can get a clear picture as to how the CultureBlox can be shaped into the towers that will help you build an awesome workplace culture.</p>
+                  <p>The discovery session is offered via a private web-based call over the Internet from whatever place is convenient for you at a time that suits you. </p>
+                  <p><strong>And the best has been saved for last. It is offered completely free of charge. What are you waiting for?</strong></p>
+
+                </div> <a href="https://calendly.com/cultureblox/discovery" target="_blank" class="button mx-auto mt-5" target="_blank">
+                  Book now
+                </a>
+
+
+              </div>
+              <div class="col-xl-7 section-half__img-col_y-bottom d-none d-xl-block section-half__img-col">
+                <img src="img/phone.svg" width="499" height="509" loading="lazy" alt="image" class="section-half__img section-half__img_scrub">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section-half section-half_animate section_half-bg section_blue">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-8 col-md-10 col-sm-11">
+                <h3 class="section-heading section-half__mobile-heading">
+                  <span class="accent-text-blue">Half Day Strategy</span> <br>
+                  Workshop
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_blue image-card_img-y-bottom">
+            <div class="container">
+              <div class="image-card__img-wrapper">
+                <img src="img/puzl.svg" alt="image" width="744" height="630" class="image-card__img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading d-none d-xl-block">
+                  <span class="accent-text-blue">Half Day Strategy</span> <br>
+                  Workshop
+                </h3>
+                <div class="text-field">
+                  <p>Most leaders know that their organization’s culture isn’t where they would like it to be, but uncovering exactly where the problems are is easier said than done. Fortunately, you don’t have to be puzzled anymore.</p>
+                  <p>A CultureBlox expert will sit with your leadership team (and board of directors if you wish for them to be in attendance) and run a workshop to explore the aspirational values and results, followed by the current values and results. Next the CultureBlox expert will work closely with you to piece together a strategy and six-month timeline to transform your organization’s current workplace culture into an awesome workplace culture. </p>
+                  <p>The workshop can be offered over the Internet from whatever place is convenient for you at a time that suits you; or we can come and deliver it in person if that is your preference. </p>
+                  <p><strong>Remember, awesome workplace cultures need to be built. This workshop will give you the architectural blueprints to begin building.</strong></p>
+
+                </div> <a href="contact.html" class="button mx-auto mt-5 button_blue">
+                  Enquire now
+                </a>
+
+
+              </div>
+              <div class="col-xl-7 section-half__img-col_y-bottom d-none d-xl-block section-half__img-col">
+                <img src="img/puzl.svg" width="744" height="630" loading="lazy" alt="image" class="section-half__img section-half__img_scrub">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section-half section-half_animate section_half-bg section_r-mode section_green">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-8 col-md-10 col-sm-11">
+                <h3 class="section-heading section-half__mobile-heading">
+                  Two-hour CultureBlox <br> <span class="accent-text-green">Workshops</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_green">
+            <div class="container">
+              <div class="image-card__img-wrapper">
+                <img src="img/cubs.svg" alt="image" width="597" height="607" class="image-card__img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading d-none d-xl-block">
+                  Two-hour CultureBlox <br> <span class="accent-text-green">Workshops</span>
+                </h3>
+                <div class="text-field">
+                  <p>Shaping the right behaviors to bring your organization’s values to life and achieving the desired outcomes can be daunting for most leaders, but what if it was fun yet practical; inspiring yet game changing? </p>
+                  <p>For each of the eight CultureBlox, we provide a two-hour workshop to enable your employees to learn how to embrace the behavior, whilst looking out for the pitfalls that can negatively impact your organization when the behavior is not used effectively. </p>
+                  <p>Our CultureBlox expert makes the workshops engaging and interactive, light on theory but jam packed with practical experiences to help your employees remember, adopt, and practice the behavior beyond the workshop. </p>
+                  <p>Each workshop can be offered over the Internet from whatever place is convenient for you at a time that suits you; or we can come and deliver it in person if that is your preference. </p>
+                  <p><strong>These workshops are where the workplace culture building magic takes place. If you want it built right, then look no further.</strong></p>
+
+                </div> <a href="contact.html" class="button mx-auto mt-5 button_green">
+                  Enquire now
+                </a>
+
+
+              </div>
+              <div class="col-xl-7 section-half__img-col_x-left d-none d-xl-block section-half__img-col">
+                <img src="img/cubs.svg" width="597" height="607" loading="lazy" alt="image" class="section-half__img section-half__img_scrub">
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="nav-menu d-flex justify-content-center alignt-items-center d-none d-xl-flex">
+            <a href="about.html" class="nav-menu__item">About</a>
+            <a href="explore.html" class="nav-menu__item">Explore</a>
+            <a href="question.html" class="nav-menu__item">Question</a>
+            <a href="start.html" class="nav-menu__item nav-menu__item_active">Start</a>
+            <a href="contact.html" class="nav-menu__item">Contact</a>
+            <a href="privacy.html" class="nav-menu__item">Privacy</a>
+          </nav>
+          <div class="social-networks footer__social-networks">
+            <a href="https://twitter.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg> </a>
+            <a href="https://www.linkedin.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="#linkedin" />
+              </svg> </a>
+            <a href="https://www.youtube.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg> </a>
+          </div>
+          <p class="text-center text-white copyright">© Copyright 2023 CultureBlox</p>
+        </div>
+      </footer>
+    </div> <!-- submit modal message start -->
+    <div id="submit-modal-success" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Great!</p>
+            <p>We will add your email to the mailing list</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="submit-modal-error" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Error!</p>
+            <p>Try again later!</p>
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- submit modal message end -->
+
+    <script defer="defer" src="js/libs.js"></script>
+    <script defer="defer" src="js/common.js"></script>
+  </body>
+
+</html>

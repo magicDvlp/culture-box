@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-US" class="html-hidden">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <style>
+      html.html-hidden {
+        width: 100%;
+        overflow: hidden
+      }
+
+      .preload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        left: 0;
+        top: 0
+      }
+
+      body {
+        overflow: hidden;
+        visibility: hidden
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1
+        }
+
+        to {
+          opacity: 0;
+          visibility: hidden
+        }
+      }
+
+      .preload_hide {
+        animation: fadeOut .8s cubic-bezier(0, 0, .2, 1) forwards
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translateY(0)
+        }
+
+        50% {
+          transform: translateY(-20px)
+        }
+
+        100% {
+          transform: translateY(0)
+        }
+      }
+
+      .preload-img {
+        width: 200px;
+        max-width: 90%;
+        height: auto;
+        animation: spin 2s infinite linear
+      }
+
+      @media(max-width:1199px) {
+        .preload-img {
+          width: 150px
+        }
+      }
+
+      @media(max-width:575px) {
+        .preload-img {
+          width: 120px
+        }
+      }
+    </style>
+    <script>
+      let externalVar = {
+        nonce: 'sadfsdf',
+        ajaxUrl: '',
+        baseUrl: '',
+      };
+    </script>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="preload">
+      <img src="img/preload.svg" alt="culture box" class="preload-img">
+    </div>
+    <div class="layout">
+      <header class="header d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center header__row">
+            <div class="col-2 d-xl-none">
+              <button class="d-flex hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <div class="d-flex justify-content-center d-xl-block col-xl-3 col-8">
+              <a href="/" class="logo header__logo">
+                <img src="img/logo.svg" class="logo__img" alt="culture box logo block ">
+              </a>
+            </div>
+            <div class="col-xl-6 d-none d-xl-block">
+              <nav class="nav-menu d-flex justify-content-center alignt-items-center">
+                <a href="about.html" class="nav-menu__item">About</a>
+                <a href="explore.html" class="nav-menu__item">Explore</a>
+                <a href="question.html" class="nav-menu__item">Question</a>
+                <a href="start.html" class="nav-menu__item">Start</a>
+                <a href="contact.html" class="nav-menu__item">Contact</a>
+              </nav>
+            </div>
+            <div class="col-xl-3 col-2 header-search-col">
+              <form action="search-result.html" class="search-widget">
+                <div class="search-widget__inner">
+                  <div class="search-widget-field">
+                    <div class="search-widget-field__input-wrapper">
+                      <button class="search-widget-field__btn search-widget-field__btn_go">&#10094;</button>
+                      <input placeholder="Search..." type="text" name="search" required autocomplete="off" class="input search-widget-field__input input_dark-mode" required>
+                    </div>
+                    <span class="search-widget-field__btn search-widget-field__btn_search">
+                  <svg class="icon icon-search search-widget-field__icon search-widget-field__icon_search">
+                    <use xlink:href="#search"/>
+                  </svg>      </span>
+                    <span class="search-widget-field__btn search-widget-field__btn_clean">
+                  <svg class="icon icon-close search-widget-field__icon search-widget-field__icon_clean">
+                    <use xlink:href="#close"/>
+                  </svg>      </span>
+                    <span class="search-widget-field-loading">
+                  <img src="img/btn-load.svg" alt="load" class="search-widget-field-loading__img">
+                </span>
+                  </div>
+                  <div class="search-list bg-white search-widget__result">
+                    <div class="search-list__inner">
+                    </div>
+                    <a href="search.html" class="search-list__all">View all results</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-layout">
+          <div class="mobile-menu">
+            <a href="about.html" class="mobile-menu-item">About</a>
+            <a href="explore.html" class="mobile-menu-item">Explore</a>
+            <a href="question.html" class="mobile-menu-item">Question</a>
+            <a href="start.html" class="mobile-menu-item">Start</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <a href="privacy.html" class="mobile-menu-item">Privacy</a>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <div class="post-main-screen bg-marigold">
+          <div class="container post-main-screen__container">
+            <div class="row post-main-screen__row">
+              <div class="col-xl-6 col-lg-7 post-main-screen__text-col">
+                <div class="publication-info publication-info_date-first publication-info_dark-mode mb-md-3 mt-3 post-main-screen__publication-info">
+                  <span class="publication-info__author">Author’s name</span>
+                  <span class="publication-info__derived"></span>
+                  <span class="publication-info__date">07/03/2023</span>
+                </div>
+                <h3 class="section-heading post-main-screen__heading">
+                  Navigating the Future of Corporate Business Culture: Adaptation Strategies in the Post-Pandemic World
+
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="post-main-screen-bg">
+            <img src="img/post.jpg" alt="image" class="post-main-screen-bg__img">
+          </div>
+        </div>
+        <section class="section section_filled section_transparent section_sm-indent">
+          <div class="container">
+            <div class="row">
+              <main class="col-xl-8 post-layout-desc-col">
+                <div class="text-field">
+                  <p style="color:#08060d"><strong>This article explores how corporate business culture is evolving in response to the unique challenges posed by the COVID-19 pandemic. It delves into the strategies that companies are employing to adapt and thrive in this new era of remote work, digital transformation, and changing employee expectations. From fostering inclusivity in virtual environments to redefining leadership in a decentralized workforce, this article examines the shifts in corporate culture and offers insights for businesses looking to navigate this rapidly changing landscape successfully.</strong></p>
+                  <br>
+                  <h5>The Unprecedented Disruption</h5>
+                  <p>The COVID-19 pandemic brought about an unparalleled disruption to the corporate world. Office doors closed, and employees logged in from their living rooms. Face-to-face meetings turned into video conferences, and water cooler chats became Slack messages. In the midst of this chaos, corporate business culture faced a profound transformation.</p>
+                  <p>Organizations that once relied on physical proximity and established office norms had to pivot rapidly. The sudden shift to remote work was a test of resilience and adaptability. It wasn't merely about surviving; it was about thriving in an entirely new work environment. How could companies maintain their unique cultures when their workforce was dispersed across various locations and time zones?</p>
+                  <br>
+                  <h5>Embracing the Virtual Workforce</h5>
+                  <p>One of the most noticeable shifts was the rapid transition to remote work. We delve into how companies adapted their corporate cultures to not only accommodate remote work but to thrive in this new environment. Discover the strategies they employed to maintain a sense of community and purpose among employees scattered across various locations.</p>
+                  <p>Remote work brought its challenges, from the struggle to disconnect from work at the end of the day to the loss of spontaneous interactions that often fueled innovation. Yet, it also offered opportunities for greater flexibility and work-life balance. Companies had to find innovative ways to foster teamwork, creativity, and camaraderie among employees who might never meet in person.</p>
+                  <br>
+                  <p><img src="img/post-inner.jpg" alt="image"></p>
+                  <br>
+                  <h5>Redefining Leadership in a Decentralized World</h5>
+                  <p>Leadership styles had to evolve as well. The traditional top-down approach no longer sufficed in a decentralized workforce. Explore the emergence of new leadership paradigms that emphasize empathy, adaptability, and effective communication. Learn how leaders cultivated trust and collaboration among team members separated by miles, time zones, and screens.</p>
+                  <p>In this new era, leadership became more about guiding and supporting rather than monitoring and directing. Successful leaders learned to lead by example, demonstrating vulnerability and a willingness to adapt to changing circumstances. They recognized the importance of regular, transparent communication to keep remote teams aligned with the organization's goals.</p>
+                  <br>
+                  <h5>Fostering Inclusivity in Virtual Environments</h5>
+                  <p>Inclusivity remained a crucial aspect of corporate culture, even in virtual settings. We examine how companies prioritized diversity and inclusion in their remote work strategies. Discover innovative ways organizations ensured that every employee felt valued and heard, regardless of their physical location or background.</p>
+                  <p>Remote work could inadvertently lead to feelings of isolation and exclusion. Companies had to actively work to break down these barriers. They implemented diversity and inclusion training programs, encouraged open dialogue about mental health, and created virtual spaces for employees to connect and share their experiences.</p>
+
+                </div>
+              </main>
+              <aside class="col-xl-4">
+                <div class="see-also-widget">
+                  <p class="see-also-widget__title">See also</p>
+                  <div class="post-simple-list post-simple-list_sm">
+                    <article class="post-simple post-simple_sm">
+                      <a href="explore-inner.html" class="post-simple__heading">Lorem ipsum dolor sit amet consectetur</a>
+                      <div class="publication-info">
+                        <span class="publication-info__author">Author’s name</span>
+                        <span class="publication-info__derived"></span>
+                        <span class="publication-info__date">07/03/2023</span>
+                      </div>
+                    </article>
+                    <article class="post-simple post-simple_sm">
+                      <a href="explore-inner.html" class="post-simple__heading">Lorem ipsum dolor sit amet consectetur</a>
+                      <div class="publication-info">
+                        <span class="publication-info__author">Author’s name</span>
+                        <span class="publication-info__derived"></span>
+                        <span class="publication-info__date">07/03/2023</span>
+                      </div>
+                    </article>
+                    <article class="post-simple post-simple_sm">
+                      <a href="explore-inner.html" class="post-simple__heading">Lorem ipsum dolor sit amet consectetur</a>
+                      <div class="publication-info">
+                        <span class="publication-info__author">Author’s name</span>
+                        <span class="publication-info__derived"></span>
+                        <span class="publication-info__date">07/03/2023</span>
+                      </div>
+                    </article>
+                    <article class="post-simple post-simple_sm">
+                      <a href="explore-inner.html" class="post-simple__heading">Lorem ipsum dolor sit amet consectetur</a>
+                      <div class="publication-info">
+                        <span class="publication-info__author">Author’s name</span>
+                        <span class="publication-info__derived"></span>
+                        <span class="publication-info__date">07/03/2023</span>
+                      </div>
+                    </article>
+                    <article class="post-simple post-simple_sm">
+                      <a href="explore-inner.html" class="post-simple__heading">Lorem ipsum dolor sit amet consectetur</a>
+                      <div class="publication-info">
+                        <span class="publication-info__author">Author’s name</span>
+                        <span class="publication-info__derived"></span>
+                        <span class="publication-info__date">07/03/2023</span>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="nav-menu d-flex justify-content-center alignt-items-center d-none d-xl-flex">
+            <a href="about.html" class="nav-menu__item">About</a>
+            <a href="explore.html" class="nav-menu__item">Explore</a>
+            <a href="question.html" class="nav-menu__item">Question</a>
+            <a href="start.html" class="nav-menu__item">Start</a>
+            <a href="contact.html" class="nav-menu__item">Contact</a>
+            <a href="privacy.html" class="nav-menu__item">Privacy</a>
+          </nav>
+          <div class="social-networks footer__social-networks">
+            <a href="https://twitter.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg> </a>
+            <a href="https://www.linkedin.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="#linkedin" />
+              </svg> </a>
+            <a href="https://www.youtube.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg> </a>
+          </div>
+          <p class="text-center text-white copyright">© Copyright 2023 CultureBlox</p>
+        </div>
+      </footer>
+    </div> <!-- submit modal message start -->
+    <div id="submit-modal-success" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Great!</p>
+            <p>We will add your email to the mailing list</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="submit-modal-error" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Error!</p>
+            <p>Try again later!</p>
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- submit modal message end -->
+
+    <script defer="defer" src="js/libs.js"></script>
+    <script defer="defer" src="js/common.js"></script>
+  </body>
+
+</html>

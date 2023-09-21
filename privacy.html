@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-US" class="html-hidden">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <style>
+      html.html-hidden {
+        width: 100%;
+        overflow: hidden
+      }
+
+      .preload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        left: 0;
+        top: 0
+      }
+
+      body {
+        overflow: hidden;
+        visibility: hidden
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1
+        }
+
+        to {
+          opacity: 0;
+          visibility: hidden
+        }
+      }
+
+      .preload_hide {
+        animation: fadeOut .8s cubic-bezier(0, 0, .2, 1) forwards
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translateY(0)
+        }
+
+        50% {
+          transform: translateY(-20px)
+        }
+
+        100% {
+          transform: translateY(0)
+        }
+      }
+
+      .preload-img {
+        width: 200px;
+        max-width: 90%;
+        height: auto;
+        animation: spin 2s infinite linear
+      }
+
+      @media(max-width:1199px) {
+        .preload-img {
+          width: 150px
+        }
+      }
+
+      @media(max-width:575px) {
+        .preload-img {
+          width: 120px
+        }
+      }
+    </style>
+    <script>
+      let externalVar = {
+        nonce: 'sadfsdf',
+        ajaxUrl: '',
+        baseUrl: '',
+      };
+    </script>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="preload">
+      <img src="img/preload.svg" alt="culture box" class="preload-img">
+    </div>
+    <div class="layout">
+      <header class="header d-flex align-items-center">
+        <div class="container">
+          <div class="row align-items-center header__row">
+            <div class="col-2 d-xl-none">
+              <button class="d-flex hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <div class="d-flex justify-content-center d-xl-block col-xl-3 col-8">
+              <a href="/" class="logo header__logo">
+                <img src="img/logo.svg" class="logo__img" alt="culture box logo block ">
+              </a>
+            </div>
+            <div class="col-xl-6 d-none d-xl-block">
+              <nav class="nav-menu d-flex justify-content-center alignt-items-center">
+                <a href="about.html" class="nav-menu__item">About</a>
+                <a href="explore.html" class="nav-menu__item">Explore</a>
+                <a href="question.html" class="nav-menu__item">Question</a>
+                <a href="start.html" class="nav-menu__item">Start</a>
+                <a href="contact.html" class="nav-menu__item">Contact</a>
+              </nav>
+            </div>
+            <div class="col-xl-3 col-2 header-search-col">
+              <form action="search-result.html" class="search-widget">
+                <div class="search-widget__inner">
+                  <div class="search-widget-field">
+                    <div class="search-widget-field__input-wrapper">
+                      <button class="search-widget-field__btn search-widget-field__btn_go">&#10094;</button>
+                      <input placeholder="Search..." type="text" name="search" required autocomplete="off" class="input search-widget-field__input input_dark-mode" required>
+                    </div>
+                    <span class="search-widget-field__btn search-widget-field__btn_search">
+                  <svg class="icon icon-search search-widget-field__icon search-widget-field__icon_search">
+                    <use xlink:href="#search"/>
+                  </svg>      </span>
+                    <span class="search-widget-field__btn search-widget-field__btn_clean">
+                  <svg class="icon icon-close search-widget-field__icon search-widget-field__icon_clean">
+                    <use xlink:href="#close"/>
+                  </svg>      </span>
+                    <span class="search-widget-field-loading">
+                  <img src="img/btn-load.svg" alt="load" class="search-widget-field-loading__img">
+                </span>
+                  </div>
+                  <div class="search-list bg-white search-widget__result">
+                    <div class="search-list__inner">
+                    </div>
+                    <a href="search.html" class="search-list__all">View all results</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu-layout">
+          <div class="mobile-menu">
+            <a href="about.html" class="mobile-menu-item">About</a>
+            <a href="explore.html" class="mobile-menu-item">Explore</a>
+            <a href="question.html" class="mobile-menu-item">Question</a>
+            <a href="start.html" class="mobile-menu-item">Start</a>
+            <a href="contact.html" class="mobile-menu-item">Contact</a>
+            <a href="privacy.html" class="mobile-menu-item mobile-menu-item_active">Privacy</a>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <section class="section section-half main-screen section_half-bg section_blue">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-9">
+                <h3 class="section-heading section-heading_lg section-half__mobile-heading">
+                  We may enjoy a good laugh or joke. But your privacy is <span class="accent-text-blue">taken very seriously</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_blue image-card_img-y-bottom">
+            <div class="container">
+              <div class="image-card__img-wrapper">
+                <img src="img/lock.svg" alt="image" width="630" height="802" class="image-card__img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading section-heading_lg d-none d-xl-block">
+                  We may enjoy a good laugh or joke. But your privacy is <span class="accent-text-blue">taken very seriously</span>
+                </h3>
+                <div class="text-field">
+                  <p>This is the boring legal and technical mumbo jumbo, but it is important because, foremost it protects you and it also protects us.</p>
+                  <p>In a sentence, what it all means is that we exemplify CultureBlox behaviors such as <strong style="color:#412f6b">gratitude</strong>, <strong style="color:#c11e22">compassion</strong>, <strong style="color:#0294f7">transparency</strong>, <strong style="color:#dd5723">focus</strong>, <strong style="color:#6f5e4e">competence</strong>, and <strong style="color:#e1a932">courage</strong> by going to great lengths to protect your identity and any information you provide to us, and if we fail we will come clean and let you know.</p>
+
+                </div>
+              </div>
+              <div class="col-xl-7 section-half__img-col_y-bottom section-half__img-col_x-right d-none d-xl-block section-half__img-col">
+                <img src="img/lock.svg" width="630" height="802" loading="lazy" alt="image" class="section-half__img">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section privacy-section">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-3 privacy-section__img-col privacy-section__img-col-l">
+                <img src="img/privacy-bg-l.svg" loading="lazy" width="421" height="607" alt="image" class="privacy-section__img privacy-section__img-l">
+              </div>
+              <div class="col-xl-6">
+                <h3 class="section-heading text-center section-heading_lg-indent">
+                  Data that is collected
+                </h3>
+                <div class="text-field">
+                  <h5>Comments</h5>
+                  <p>If you leave comments on the CultureBlox website the data you submit via the comments form (name, email address and the message you send); the IP address of your computer, proxy server or VPN gateway; web browser software versions; and operating system software versions will be collected. Together this information helps separate humans from bots, it enables better detection of real messages and deletion of spam, and it also provides information about which content is most viewed. It allows us to serve you better with lots more content that is useful to you.</p>
+                  <p>An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public next to any comments you post.</p>
+                  <h5>Media</h5>
+                  <p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download images and extract location data and will be able to pinpoint where the image was taken. There are freely available tools for removing location data.</p>
+                  <h5>Cookies</h5>
+                  <p>If you leave a comment on the CultureBlox site you may opt-in to saving your name, email address and website in cookies (no, not the kind you dunk in milk). These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>
+                  <p>If you visit our login page, a temporary cookie will be created to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>
+                  <h5>Embedded content from other websites</h5>
+                  <p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>
+                  <p>Unfortunately, we don’t have control over those sites, so it is important that you know that these websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website. </p>
+                  <h5>Analytics</h5>
+                  <p>Google Analytics is used for website profiling. This provides information such as the number of pages viewed, the estimated view time of each page, IP address information of either your computer, your proxy server or VPN gateway and web browser and operating system software versions. This information is for us to identify which pages are most viewed and to optimize future content for you. This information is generic and is not attributed to any single user who visits the CultureBlox website.</p>
+
+                </div>
+              </div>
+              <div class="col-xl-3 d-none d-xl-flex privacy-section__img-col privacy-section__img-col-r">
+                <img src="img/privacy-bg-r.svg" loading="lazy" width="421" height="568" alt="image" class="privacy-section__img privacy-section__img-r">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section-half section-half_animate section_half-bg section_r-mode section_blue">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-8 col-md-10 col-sm-11">
+                <h3 class="section-heading section-half__mobile-heading">
+                  Handling your data <br> <span class="accent-text-blue">with great care</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_blue image-card_img-y-bottom image-card_img-x-left">
+            <div class="image-card__img-wrapper">
+              <img src="img/heart.svg" alt="image" width="829" height="837" class="image-card__img" loading="lazy">
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading d-none d-xl-block">
+                  Handling your data <br> <span class="accent-text-blue">with great care</span>
+                </h3>
+                <div class="text-field">
+                  <h5>Who your data is shared with</h5>
+                  <p>We do not voluntarily share your data with anyone outside of CultureBlox unless you request us to and give us consent in writing. If required, by law, to provide information we have collected about you to a court or law enforcement agency, you will be notified.</p>
+                  <h5>How long we retain your data</h5>
+                  <p>If you leave a comment, the comment and its metadata (such as the date and time the comment was posted) are retained indefinitely. This is to recognize and approve any follow-up comments automatically instead of holding them in a moderation queue. For users that register on our website, personal information they provide in their user profile will be stored. All users can see, edit, or delete their personal information at any time (although they cannot change their username). Website administrators can also see and edit that information.</p>
+                  <h5>What rights you have over your data</h5>
+                  <p>At any time, you can request that any personal data held about you be deleted. This does not include any data we that must be kept for administrative, legal, or security purposes. If some or all of your data is unable to be deleted for these reasons, you will be informed.</p>
+                  <h5>Where your data may be sent</h5>
+                  <p>Visitor comments may be checked through an automated spam detection service. We have no control over how that service handles the contents of your comments.</p>
+
+                </div>
+              </div>
+              <div class="col-xl-7 section-half__img-col_container-out section-half__img-col_y-bottom section-half__img-col_x-left d-none d-xl-block section-half__img-col">
+                <img src="img/heart.svg" width="829" height="837" loading="lazy" alt="image" class="section-half__img section-half__img_scrub">
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="section section-half section-half_animate section_half-bg section_green">
+          <div class="container">
+            <div class="row d-xl-none">
+              <div class="col col-lg-8 col-md-10 col-sm-11">
+                <h3 class="section-heading section-half__mobile-heading">
+                  When things go <br>
+                  <span class="accent-text-green">pear-shaped</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="image-card d-xl-none image-card_green image-card_img-y-bottom">
+            <div class="container">
+              <div class="image-card__img-wrapper">
+                <img src="img/pear.svg" alt="image" width="537" height="840" class="image-card__img" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-5 section-half__text-col">
+                <h3 class="section-heading d-none d-xl-block">
+                  When things go <br>
+                  <span class="accent-text-green">pear-shaped</span>
+                </h3>
+                <div class="text-field">
+                  <h5>Data breach disclosure requirements</h5>
+                  <p>Whilst everything in our power is done to protect your data, if a data breach was to occur and information you have supplied to us is lost or stolen, the leaders at CultureBlox will:</p>
+                  <p>1. Notify you and apologize within 24 hours of the breach being discovered. You will receive details of the breach and recommended next steps. <br>
+                    2. Publish information on its website to keep both you and the public informed of updates and actions being taken. <br>
+                    3. Notify law enforcement in the countries where CultureBlox operates. <br>
+                    4. Notify any privacy regulatory bodies in the countries where CultureBlox operates.</p>
+                  <h5>Questions</h5>
+                  <p> If you have any questions about how the privacy of your information is maintained, please click on “Ask Us” below and ask your question.</p>
+
+                </div> <a href="contact.html" class="button mx-auto mt-5 button_green">
+                  Ask us
+                </a>
+
+
+              </div>
+              <div class="col-xl-7 section-half__img-col_y-bottom section-half__img-col_x-right d-none d-xl-block section-half__img-col">
+                <img src="img/pear.svg" width="537" height="840" loading="lazy" alt="image" class="section-half__img section-half__img_scrub">
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="nav-menu d-flex justify-content-center alignt-items-center d-none d-xl-flex">
+            <a href="about.html" class="nav-menu__item">About</a>
+            <a href="explore.html" class="nav-menu__item">Explore</a>
+            <a href="question.html" class="nav-menu__item">Question</a>
+            <a href="start.html" class="nav-menu__item">Start</a>
+            <a href="contact.html" class="nav-menu__item">Contact</a>
+            <a href="privacy.html" class="nav-menu__item nav-menu__item_active">Privacy</a>
+          </nav>
+          <div class="social-networks footer__social-networks">
+            <a href="https://twitter.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg> </a>
+            <a href="https://www.linkedin.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-linkedin">
+                <use xlink:href="#linkedin" />
+              </svg> </a>
+            <a href="https://www.youtube.com/" class="social-networks__btn" target="_blank">
+              <svg class="icon icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg> </a>
+          </div>
+          <p class="text-center text-white copyright">© Copyright 2023 CultureBlox</p>
+        </div>
+      </footer>
+    </div> <!-- submit modal message start -->
+    <div id="submit-modal-success" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Great!</p>
+            <p>We will add your email to the mailing list</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="submit-modal-error" aria-hidden="true" class="modal micromodal-slide submit-modal Fixed">
+      <div data-micromodal-close class="modal__overlay submit-modal__overlay">
+        <button class="submit-modal__close-btn" data-micromodal-close></button>
+        <div class="modal__container submit-modal__container">
+          <div class="modal__content submit-modal__content">
+            <p>Error!</p>
+            <p>Try again later!</p>
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- submit modal message end -->
+
+    <script defer="defer" src="js/libs.js"></script>
+    <script defer="defer" src="js/common.js"></script>
+  </body>
+
+</html>
